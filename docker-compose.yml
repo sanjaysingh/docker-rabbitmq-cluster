@@ -1,0 +1,37 @@
+version: "3"
+services:
+    rabbit1:
+      image: sanjaysingh/rabbitmq-cluster
+      hostname: rabbit1
+      environment:
+        - ERLANG_COOKIE=abcdefg
+      ports:
+        - "5691:5672"
+        - "15691:15672"
+    rabbit2:
+      image: sanjaysingh/rabbitmq-cluster
+      hostname: rabbit2
+      depends_on:
+        - "rabbit1"
+      environment:
+        - ERLANG_COOKIE=abcdefg
+        - CLUSTER_WITH=rabbit1
+        - ENABLE_RAM=true
+      ports:
+        - "5692:5672"
+        - "15692:15672"
+    rabbit3:
+      image: sanjaysingh/rabbitmq-cluster
+      hostname: rabbit3
+      depends_on:
+        - "rabbit1"
+      environment:
+        - ERLANG_COOKIE=abcdefg
+        - CLUSTER_WITH=rabbit1
+      ports:
+        - "5693:5672"
+        - "15693:15672"
+
+
+
+
