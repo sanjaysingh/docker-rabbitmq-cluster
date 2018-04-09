@@ -1,4 +1,4 @@
-Docker images to run RabbitMQ cluster. It extends the official image with a rabbitmq-cluster script that does the magic.
+Docker images to run RabbitMQ cluster. It extends the official image with a rabbitmq-cluster script that does the clustering.
 
 # Building
 
