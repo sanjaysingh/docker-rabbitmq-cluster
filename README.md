@@ -10,8 +10,6 @@ docker build -t sanjaysingh/rabbitmq-cluster .
 
 # Running with docker-compose
 
-If you want to run the cluster on one machine use [docker-compose](https://github.com/docker/compose/)
-
 ```
 docker-compose up -d
 ```
@@ -52,12 +50,13 @@ rabbit1:
         - "15693:15672"
 ```
 
-If needed, additional nodes can be added to this file.
 
 Once cluster is up:
 * The management console can be accessed at `http://localhost:15691`, `http://localhost:15692` and `http://localhost:15693`
 
 
+# Credits
 
+* Inspired by https://github.com/harbur/docker-rabbitmq-cluster
 
 
