@@ -52,7 +52,7 @@ rabbit1:
 
 
 Once cluster is up:
-* The management console can be accessed at `http://localhost:15691`, `http://localhost:15692` and `http://localhost:15693`
+* The management console can be accessed at http://localhost:15691, http://localhost:15692 and http://localhost:15693
 
 
 # Credits
